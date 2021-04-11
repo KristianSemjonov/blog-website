@@ -1,0 +1,17 @@
+<%- include("partials/header"); -%>
+
+<h1>Home</h1>
+<p> <%= StartingContent %> </p>
+<% console.log(PostTitles); %>
+
+<% PostTitles.forEach(function(PostTitle){; %>
+
+<h1><%= PostTitle.title %> </h1>
+<p> <%= PostTitle.content.substring(0, 100) + "..." %>
+<a href="/posts/<%=PostTitle.title%>">Read more</a>
+</p>
+<% }); %>
+
+<%# //PostTitle is local variable in home.ejs %>
+
+<%- include("partials/footer"); -%>
